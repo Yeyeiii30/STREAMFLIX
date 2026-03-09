@@ -3,7 +3,7 @@ function login(){
 let user = document.getElementById("user").value;
 let pass = document.getElementById("pass").value;
 
-if(user === "admin" && pass === "1234"){
+if(user === "YEYEIII" && pass === "30241328"){
 
 document.getElementById("loading").classList.add("active");
 
@@ -215,5 +215,6 @@ window.onload=function(){
 cargarUsuario();
 cargarRecomendadas();
 cargarPelicula();
+
 
 };
