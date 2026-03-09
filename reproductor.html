@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<title>StreamFlix</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="home-body">
+
+<header class="navbar">
+
+<h1 class="logo">STREAMFLIX</h1>
+
+<div class="user-menu">
+
+<span id="usuarioNombre"></span>
+
+<button onclick="logout()">Cerrar sesión</button>
+
+</div>
+
+</header>
+
+<div class="player">
+
+<button class="back" onclick="volver()">⬅ Volver</button>
+
+<h1 id="tituloPeli"></h1>
+
+<video width="900" controls>
+
+<source src="video/demo.mp4" type="video/mp4">
+
+</video>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+
+let peli = localStorage.getItem("pelicula");
+
+document.getElementById("tituloPeli").innerText = peli;
+
+</script>
+
+</body>
+</html>

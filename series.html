@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Series - StreamFlix</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="home-body">
+
+<header class="navbar">
+
+<h1 class="logo">STREAMFLIX</h1>
+
+<nav>
+<a href="index.html">Inicio</a>
+<a href="series.html">Series</a>
+<a href="peliculas.html">Películas</a>
+</nav>
+
+<div id="usuarioNombre"></div>
+
+<button onclick="cerrarSesion()">Cerrar sesión</button>
+
+</header>
+
+<br><br><br>
+
+<h2 style="margin-left:20px">Series populares</h2>
+
+<div class="row-posters">
+
+<div class="movie">
+<img src="https://image.tmdb.org/t/p/w500/49WJfeN0moxb9IPfGn8AIqMGskD.jpg"
+onclick="verPeli('Stranger Things')">
+<p>Stranger Things</p>
+</div>
+
+<div class="movie">
+<img src="https://image.tmdb.org/t/p/w500/qJxzjUjCpTPvDHldNnlbRC4OqEh.jpg"
+onclick="verPeli('Wednesday')">
+<p>Wednesday</p>
+</div>
+
+<div class="movie">
+<img src="https://image.tmdb.org/t/p/w500/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg"
+onclick="verPeli('The Witcher')">
+<p>The Witcher</p>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

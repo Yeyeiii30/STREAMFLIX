@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<title>StreamFlix</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<script>
+if (!localStorage.getItem("usuario")) {
+window.location.href = "login.html";
+}
+</script>
+
+<body class="home-body">
+
+<header class="navbar">
+
+<h1 class="logo">STREAMFLIX</h1>
+
+<nav>
+<a href="index.html">Inicio</a>
+<a href="series.html">Series</a>
+<a href="peliculas.html">Películas</a>
+</nav>
+
+<div class="search-box">
+<input type="text" id="buscar" placeholder="Buscar..." onkeyup="buscar()">
+</div>
+
+<div class="user-menu">
+
+<span id="usuarioNombre">👤 YEYEIII</span>
+
+<button onclick="logout()">Cerrar sesión</button>
+
+</div>
+
+</header>
+
+
+<!-- BANNER PRINCIPAL -->
+
+<section class="banner">
+
+<div class="banner-content">
+
+<h1 class="banner-title">STRANGER THINGS</h1>
+
+<p class="banner-desc">
+Un grupo de niños descubre un mundo oscuro lleno de criaturas
+y secretos del gobierno.
+</p>
+
+<button class="play" onclick="verPeli('Stranger Things')">
+▶ Reproducir
+</button>
+
+</div>
+
+</section>
+
+<section class="row">
+
+<h2>Recomendado para ti</h2>
+
+<div class="row-posters" id="recomendadas">
+
+</div>
+
+</section>
+
+<section class="row">
+
+<h2>Tendencias ahora</h2>
+
+<div class="row-posters">
+
+<div class="movie">
+<span class="numero">1</span>
+<img src="https://image.tmdb.org/t/p/w500/kyeqWdyUXW608qlYkRqosgbbJyK.jpg" onclick="verPeli('Avatar')">
+<p>Avatar</p>
+</div>
+
+<div class="movie">
+<span class="numero">2</span>
+<img src="https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg" onclick="verPeli('The Batman')">
+<p>The Batman</p>
+</div>
+
+<div class="movie">
+<span class="numero">3</span>
+<img src="https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg" onclick="verPeli('Spiderman')">
+<p>Spiderman</p>
+</div>
+
+<div class="movie">
+<span class="numero">4</span>
+<img src="https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg" onclick="verPeli('Joker')">
+<p>Joker</p>
+</div>
+
+<div class="movie">
+<span class="numero">5</span>
+<img src="https://image.tmdb.org/t/p/w500/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg" onclick="verPeli('Fast & Furious')">
+<p>Fast & Furious</p>
+</div>
+
+<div class="movie">
+<span class="numero">6</span>
+<img src="https://image.tmdb.org/t/p/w500/6DcqR9Nk3n06hH0Q7uQqF2h0L7R.jpg" onclick="verPeli('Superman')">
+<p>Superman</p>
+</div>
+
+<div class="movie">
+<span class="numero">7</span>
+<img src="https://image.tmdb.org/t/p/w500/yF1eOkaYvwiORauRCPWznV9xVvi.jpg" onclick="verPeli('Minecraft Movie')">
+<p>Minecraft Movie</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="row">
+
+<h2>Acción</h2>
+
+<div class="row-posters">
+
+<div class="movie">
+<img src="https://image.tmdb.org/t/p/w500/fZPSd91yGE9fCcCe6OoQr6E3Bev.jpg" onclick="verPeli('John Wick')">
+<p>John Wick</p>
+</div>
+
+<div class="movie">
+<img src="https://image.tmdb.org/t/p/w500/hA2ple9q4qnwxp3hKVNhroipsir.jpg" onclick="verPeli('Mad Max')">
+<p>Mad Max</p>
+</div>
+
+<div class="movie">
+<img src="https://image.tmdb.org/t/p/w500/aOIuZAjPaRIE6CMzbazvcHuHXDc.jpg" onclick="verPeli('Matrix')">
+<p>Matrix</p>
+</div>
+
+<div class="movie">
+<img src="https://image.tmdb.org/t/p/w500/1HOYvwGFioUFL58UVvDRG6beEDm.jpg" onclick="verPeli('Avengers')">
+<p>Avengers</p>
+</div>
+
+<div class="movie">
+<img src="https://image.tmdb.org/t/p/w500/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg" onclick="verPeli('Rápidos y Furiosos')">
+<p>Fast & Furious</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="row">
+
+<h2>Comedia</h2>
+
+<div class="row-posters">
+
+<div class="movie">
+<img src="https://image.tmdb.org/t/p/w500/ek8e8txUyUwd2BNqj6lFEerJfbq.jpg" onclick="verPeli('Superbad')">
+<p>Superbad</p>
+</div>
+
+<div class="movie">
+<img src="https://image.tmdb.org/t/p/w500/2x8lq0Z4wN0k2uP2k3q7AJ7Digw.jpg" onclick="verPeli('The Mask')">
+<p>The Mask</p>
+</div>
+
+<div class="movie">
+<img src="https://image.tmdb.org/t/p/w500/k7eYdWvhYQyRQoU2TB2A2Xu2TfD.jpg" onclick="verPeli('Son como niños')">
+<p>Son como niños</p>
+</div>
+
+<div class="movie">
+<img src="https://image.tmdb.org/t/p/w500/fSRb7vyIP8rQpL0I47P3qUsEKX3.jpg" onclick="verPeli('¿Qué pasó ayer?')">
+<p>¿Qué pasó ayer?</p>
+</div>
+
+<div class="movie">
+<img src="https://image.tmdb.org/t/p/w500/8K8P0G0S5tVtN3p75Nwp0UrEGou.jpg" onclick="verPeli('Norbit')">
+<p>Norbit</p>
+</div>
+
+</div>
+
+</section>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
