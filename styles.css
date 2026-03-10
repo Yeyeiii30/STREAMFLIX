@@ -273,6 +273,51 @@ padding:10px;
 cursor:pointer;
 }
 
+.footer{
+background:#000;
+color:#aaa;
+padding:40px 60px;
+margin-top:60px;
+}
+
+.footer-container{
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:40px;
+}
+
+.footer-logo h2{
+color:red;
+}
+
+.footer-links{
+display:flex;
+flex-direction:column;
+}
+
+.footer-links a{
+color:#aaa;
+text-decoration:none;
+margin-top:8px;
+}
+
+.footer-links a:hover{
+color:white;
+}
+
+.footer-social p{
+margin:6px 0;
+cursor:pointer;
+}
+
+.footer-bottom{
+text-align:center;
+margin-top:30px;
+font-size:14px;
+color:#666;
+}
+
 @keyframes zoom{
 from{transform:scale(1);}
 to{transform:scale(1.2);}
@@ -291,5 +336,6 @@ height:40vh;
 .banner-title{
 font-size:30px;
 }
+
 
 }
